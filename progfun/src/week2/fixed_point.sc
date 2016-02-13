@@ -22,8 +22,8 @@ object fixed_point {
 
   def averageDump(f: Double => Double)(x: Double) = (x + f(x)) / 2
                                                   //> averageDump: (f: Double => Double)(x: Double)Double
-	def sqrt(x: Double) = fixedPoint(averageDump(y => x / y))(1)
+  def sqrt(x: Double) = fixedPoint(averageDump(y => x / y))(1)
                                                   //> sqrt: (x: Double)Double
 	
-	sqrt(2)                                   //> res1: Double = 1.4142135623746899
+  sqrt(2)                                   //> res1: Double = 1.4142135623746899
 }
